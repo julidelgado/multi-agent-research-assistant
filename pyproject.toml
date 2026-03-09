@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-research-assistant"
+version = "0.1.0"
+description = "Free multi-agent research assistant that builds structured market reports."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Project 3 Builder" }]
+dependencies = [
+  "ddgs>=9.0.0",
+  "trafilatura>=1.9.0",
+  "lxml_html_clean>=0.4.3",
+  "ftfy>=6.2.3",
+  "pydantic>=2.7.0",
+  "ollama>=0.4.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+multi-agent-research = "multi_agent_research_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
