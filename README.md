@@ -1,4 +1,4 @@
-# Project 3 - Multi-Agent Research Assistant
+# Multi-Agent Research Assistant
 
 Free multi-agent research system that takes a prompt like:
 
